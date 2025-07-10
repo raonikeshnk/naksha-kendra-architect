@@ -60,19 +60,19 @@ const Index = () => {
                 Transform your vision into reality with our professional architectural services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white border-0">
                   <Link to="/projects">
                     View Projects <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent">
                   <Link to="/contact">Get Quote</Link>
                 </Button>
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
               <img
-                src="/lovable-uploads/766134ae-e9c1-463a-a5f7-4405363f8134.png"
+                src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png"
                 alt="Naksha Kendra Logo"
                 className="h-64 w-auto filter brightness-0 invert animate-fade-in"
               />
@@ -110,7 +110,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
               <Link to="/services">
                 View All Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -169,10 +169,10 @@ const Index = () => {
             Contact us today for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-secondary hover:bg-gray-100">
+            <Button asChild size="lg" className="bg-white text-secondary hover:bg-gray-100 border-0">
               <Link to="/contact">Get Free Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-secondary">
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-secondary bg-transparent">
               <Link to="/projects">View Our Work</Link>
             </Button>
           </div>
