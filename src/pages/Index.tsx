@@ -8,12 +8,12 @@ const Index = () => {
   const services = [
     {
       icon: Home,
-      title: "2D Planning",
-      description: "Detailed floor plans and layout designs for residential and commercial spaces."
+      title: "2D Planning as per vastu",
+      description: "Detailed floor plans as per vastu and layout designs for residential and commercial spaces."
     },
     {
       icon: Building,
-      title: "3D Elevation",
+      title: "Exterier",
       description: "Stunning 3D visualizations of your building's exterior design and architecture."
     },
     {
@@ -24,7 +24,7 @@ const Index = () => {
     {
       icon: Layers,
       title: "Ceiling Design",
-      description: "Creative ceiling solutions including false ceiling and decorative designs."
+      description: "Creative ceiling solutions including false ceiling, PVC wall panels, Louvers and decorative designs."
     },
     {
       icon: Palette,
@@ -37,6 +37,7 @@ const Index = () => {
     "Professional architectural expertise",
     "Custom design solutions",
     "Timely project delivery",
+    "Turnkey projects",
     "Affordable pricing"
   ];
 
@@ -49,11 +50,11 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Shaping Spaces,{" "}
-                <span className="text-yellow-400">Crafting Dreams</span>
+                स्थान को आकार देना,{" "}
+                <span className="text-yellow-400">सपनों को गढ़ना</span>
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-gray-200">
-                <span className="font-devanagari">नक्शा केंद्र - वास्तुकार</span>
+                <span className="font-devanagari">नक्शा केंद्र - <span className="text-3xl">वास्तुकार</span></span>
               </p>
               <p className="text-lg mb-8 text-gray-300 max-w-xl">
                 Experts in Exterior 2D/3D Elevations & Interior Designs. 
@@ -74,7 +75,7 @@ const Index = () => {
               <img
                 src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png"
                 alt="Naksha Kendra Logo"
-                className="h-64 w-auto filter brightness-0 invert animate-fade-in"
+                className="h-64 w-auto animate-fade-in"
               />
             </div>
           </div>
@@ -128,7 +129,7 @@ const Index = () => {
                 Why Choose Naksha Kendra?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                With years of experience in architectural design and interior solutions, 
+                With 7 years of experience in architectural design and interior solutions, 
                 we bring your vision to life with precision, creativity, and attention to detail.
               </p>
               <div className="space-y-4 mb-8">

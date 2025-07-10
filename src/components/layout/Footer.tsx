@@ -1,8 +1,10 @@
 
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -13,14 +15,15 @@ export const Footer = () => {
               <img
                 src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png"
                 alt="Naksha Kendra Logo"
-                className="h-12 w-auto filter brightness-0 invert"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-gray-300 mb-4">
-              Shaping Spaces, Crafting Dreams. Expert architectural services for your dream home and commercial spaces.
+              स्थान को आकार देना, सपनों को गढ़ना।<br />
+              Expert architectural services for your dream home and commercial spaces.
             </p>
             <p className="text-sm text-gray-400">
-              Professional 2D Planning, 3D Elevation, Interior Design, and Modular Kitchen services in Neemrana, Rajasthan.
+              Professional 2D Planning as per vastu, Exterier, Interior Design, and Modular Kitchen services in Neemrana, Rajasthan.
             </p>
           </div>
 
@@ -63,12 +66,16 @@ export const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  Opp Rajasthan Gramin Bank, Shahjahanpur, Neemrana, Rajasthan 301706
+                  Opp Rajasthan Gramin Bank, Near Police Station, Shahjahanpur, Neemrana, Rajasthan 301706
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
-                <span className="text-gray-300">+91 XXXXX XXXXX</span>
+                <span className="text-gray-300">+91 78915 00173</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <MessageCircle className="h-5 w-5 text-secondary flex-shrink-0" />
+                <span className="text-gray-300">+91 9549700173</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
@@ -81,7 +88,7 @@ export const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Naksha Kendra. All rights reserved.
+              © {currentYear} Naksha Kendra. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
               Built with passion for architectural excellence

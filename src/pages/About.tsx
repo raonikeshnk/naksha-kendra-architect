@@ -1,12 +1,13 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Users, Clock, ThumbsUp, Target, Eye, Heart } from "lucide-react";
+import { Award, Users, Clock, ThumbsUp, Target, Eye, Heart, Cog } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Users, value: "100+", label: "Happy Clients" },
-    { icon: Award, value: "150+", label: "Projects Completed" },
-    { icon: Clock, value: "5+", label: "Years Experience" },
+    { icon: Users, value: "300+", label: "Happy Clients" },
+    { icon: Award, value: "250+", label: "Projects Completed" },
+    { icon: Cog, value: "70+", label: "Running Projects" },
+    { icon: Clock, value: "7+", label: "Years Experience" },
     { icon: ThumbsUp, value: "99%", label: "Client Satisfaction" }
   ];
 
@@ -19,7 +20,7 @@ const About = () => {
     {
       icon: Eye,
       title: "Our Vision",
-      description: "To be the leading architectural consultancy in Rajasthan, known for excellence in design, sustainability, and client satisfaction."
+      description: "To be the leading architectural consultancy in Rajasthan and Haryana, known for excellence in design, sustainability, and client satisfaction."
     },
     {
       icon: Heart,
@@ -32,6 +33,7 @@ const About = () => {
     "Professional architectural expertise with years of experience",
     "Custom design solutions tailored to your specific needs",
     "Timely project delivery with transparent communication",
+    "Turnkey projects",
     "Competitive pricing without compromising on quality",
     "Local expertise with deep understanding of regional requirements",
     "Comprehensive services from planning to execution"
@@ -44,7 +46,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Naksha Kendra</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            <span className="font-devanagari text-2xl">नक्शा केंद्र - वास्तुकार</span>
+            <span className="font-devanagari text-2xl">नक्शा केंद्र - <span className="text-3xl">वास्तुकार</span></span>
             <br />
             Your trusted partner in architectural excellence
           </p>
@@ -59,8 +61,8 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-gray-700">
                 <p>
-                  Established in the heart of Neemrana, Rajasthan, Naksha Kendra has been 
-                  transforming architectural visions into reality for over five years. 
+                  Established in 2019 in the heart of Neemrana, Rajasthan, Naksha Kendra has been 
+                  transforming architectural visions into reality for over seven years. 
                   What started as a passion for creating beautiful, functional spaces has 
                   evolved into a comprehensive architectural consultancy.
                 </p>
@@ -72,7 +74,7 @@ const About = () => {
                   modern design principles.
                 </p>
                 <p>
-                  From humble beginnings, we have grown to serve clients across Rajasthan, 
+                  From humble beginnings, we have grown to serve clients across Rajasthan and Haryana, 
                   delivering projects that range from residential homes to commercial complexes, 
                   each designed with meticulous attention to detail and client satisfaction.
                 </p>
@@ -93,7 +95,7 @@ const About = () => {
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center text-white">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
@@ -162,7 +164,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Commitment</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Located in Shahjahanpur, Neemrana, we are deeply rooted in our community 
-              and committed to serving the architectural needs of Rajasthan and beyond.
+              and committed to serving the architectural needs of Rajasthan and Haryana.
             </p>
           </div>
           
@@ -170,11 +172,11 @@ const About = () => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold text-primary mb-4">Our Location</h3>
               <p className="text-lg text-gray-700 mb-2">
-                Opp Rajasthan Gramin Bank, Shahjahanpur, Neemrana, Rajasthan 301706
+                Opp Rajasthan Gramin Bank, Near Police Station, Shahjahanpur, Neemrana, Rajasthan 301706
               </p>
               <p className="text-gray-600">
-                Strategically located to serve clients across the National Capital Region 
-                and Rajasthan, we bring architectural excellence closer to home.
+                Strategically located to serve clients across the National Capital Region, 
+                Rajasthan and Haryana, we bring architectural excellence closer to home.
               </p>
             </div>
           </div>

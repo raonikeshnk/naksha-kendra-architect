@@ -6,10 +6,10 @@ const Services = () => {
   const services = [
     {
       icon: Home,
-      title: "2D Planning",
-      description: "Comprehensive floor plan design and space planning solutions",
+      title: "2D Planning as per vastu",
+      description: "Comprehensive floor plan design and space planning solutions as per vastu",
       features: [
-        "Detailed floor plan layouts",
+        "Detailed floor plan layouts as per vastu",
         "Space optimization planning",
         "Furniture placement suggestions",
         "Electrical and plumbing layouts",
@@ -19,14 +19,17 @@ const Services = () => {
     },
     {
       icon: Building,
-      title: "3D Elevation",
+      title: "Exterier",
       description: "Stunning 3D visualizations of your building's exterior design",
       features: [
+        "3D Elevation",
         "Photorealistic 3D renderings",
+        "Day and night view",
         "Multiple angle views",
         "Material and texture visualization",
         "Lighting and shadow studies",
-        "Walkthrough animations"
+        "Walkthrough exterior videos",
+        "ACP Sheet Design"
       ],
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -46,13 +49,13 @@ const Services = () => {
     {
       icon: Layers,
       title: "Ceiling Design",
-      description: "Creative ceiling solutions including false ceiling and decorative designs",
+      description: "Creative ceiling solutions including false ceiling, PVC wall panels, Louvers and decorative designs",
       features: [
         "False ceiling installation",
-        "Decorative ceiling patterns",
+        "Decorative ceiling panels",
         "Lighting integration",
-        "Acoustic solutions",
-        "Maintenance-friendly designs"
+        "Louvers and PVC wall panels",
+        "Easily Maintenance"
       ],
       image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
