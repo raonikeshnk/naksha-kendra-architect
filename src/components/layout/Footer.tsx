@@ -1,22 +1,14 @@
-
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-primary text-white">
+  return <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img
-                src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png"
-                alt="Naksha Kendra Logo"
-                className="h-12 w-auto"
-              />
+              <img src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png" alt="Naksha Kendra Logo" className="h-12 w-auto" />
             </div>
             <p className="text-gray-300 mb-4">
               आपके सपनों का घर, हमारी कलाकारी।<br />
@@ -91,16 +83,11 @@ export const Footer = () => {
               © {currentYear} Naksha Kendra. All rights reserved.
             </p>
             <div className="text-gray-400 text-sm mt-2 md:mt-0 flex flex-col md:flex-row items-center gap-2">
-              <span>Built with passion for architectural excellence</span>
-              <span className="hidden md:inline">|</span>
+              
+              
               <span>
                 Developed by{" "}
-                <a 
-                  href="https://www.raonikeshnk.in" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-secondary hover:text-white transition-colors"
-                >
+                <a href="https://www.raonikeshnk.in" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-white transition-colors">
                   Rao Nikesh NK
                 </a>
               </span>
@@ -108,6 +95,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
