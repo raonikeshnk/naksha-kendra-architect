@@ -1,79 +1,40 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Home, Building, ChefHat, Layers, Palette, Ruler, Video, Sun, Moon } from "lucide-react";
-
 const Services = () => {
-  const services = [
-    {
-      icon: Home,
-      title: "2D Planning as per vastu",
-      category: "Planning",
-      features: [
-        "Floor plan design",
-        "Site layout planning",
-        "Room arrangement as per vastu",
-        "Space optimization",
-        "Building code compliance"
-      ],
-      description: "Detailed architectural plans following vastu principles for optimal space utilization and positive energy flow."
-    },
-    {
-      icon: Building,
-      title: "Exterier",
-      category: "3D Design",
-      features: [
-        "3D Elevation",
-        "Day and night view",
-        "Walkthrough exterier videos",
-        "ACP Sheet Design",
-        "Material selection guidance"
-      ],
-      description: "Stunning exterior visualizations with day/night views and walkthrough animations for complete design understanding."
-    },
-    {
-      icon: ChefHat,
-      title: "Modular Kitchen",
-      category: "Interior",
-      features: [
-        "Custom kitchen layouts",
-        "Storage optimization",
-        "Appliance integration",
-        "Material selection",
-        "3D visualization"
-      ],
-      description: "Functional and stylish modular kitchen designs tailored to your cooking needs and space requirements."
-    },
-    {
-      icon: Layers,
-      title: "Ceiling Design",
-      category: "Interior",
-      features: [
-        "False ceiling design",
-        "Decorative ceiling panels",
-        "Louvers and PVC wall panels",
-        "Lighting integration",
-        "Easily Maintenance"
-      ],
-      description: "Creative ceiling solutions that enhance aesthetics while providing functional benefits and easy maintenance."
-    },
-    {
-      icon: Palette,
-      title: "Interior Designing",
-      category: "Interior",
-      features: [
-        "Space planning",
-        "Color schemes",
-        "Furniture selection",
-        "Lighting design",
-        "Complete makeovers"
-      ],
-      description: "Comprehensive interior design services to create beautiful, functional spaces that reflect your personality."
-    }
-  ];
-
+  const services = [{
+    icon: Home,
+    title: "2D Planning as per vastu",
+    category: "Planning",
+    features: ["Floor plan design", "Site layout planning", "Room arrangement as per vastu", "Space optimization", "Building code compliance"],
+    description: "Detailed architectural plans following vastu principles for optimal space utilization and positive energy flow."
+  }, {
+    icon: Building,
+    title: "Exterier",
+    category: "3D Design",
+    features: ["3D Elevation", "Day and night view", "Walkthrough exterier videos", "ACP Sheet Design", "Material selection guidance"],
+    description: "Stunning exterior visualizations with day/night views and walkthrough animations for complete design understanding."
+  }, {
+    icon: ChefHat,
+    title: "Modular Kitchen",
+    category: "Interior",
+    features: ["Custom kitchen layouts", "Storage optimization", "Appliance integration", "Material selection", "3D visualization"],
+    description: "Functional and stylish modular kitchen designs tailored to your cooking needs and space requirements."
+  }, {
+    icon: Layers,
+    title: "Ceiling Design",
+    category: "Interior",
+    features: ["False ceiling design", "Decorative ceiling panels", "Louvers and PVC wall panels", "Lighting integration", "Easily Maintenance"],
+    description: "Creative ceiling solutions that enhance aesthetics while providing functional benefits and easy maintenance."
+  }, {
+    icon: Palette,
+    title: "Interior Designing",
+    category: "Interior",
+    features: ["Space planning", "Color schemes", "Furniture selection", "Lighting design", "Complete makeovers"],
+    description: "Comprehensive interior design services to create beautiful, functional spaces that reflect your personality."
+  }];
   const getCategoryColor = (category: string) => {
-    switch(category) {
+    switch (category) {
       case "Planning":
         return "bg-blue-500";
       case "3D Design":
@@ -84,16 +45,12 @@ const Services = () => {
         return "bg-gray-500";
     }
   };
-
-  return (
-    <div className="min-h-screen bg-accent">
+  return <div className="min-h-screen bg-accent">
       {/* Header */}
       <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            आपके सपनों का घर, हमारी कलाकारी - Comprehensive architectural and interior design solutions
-          </p>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">Comprehensive architectural and interior design solutions</p>
         </div>
       </section>
 
@@ -101,8 +58,7 @@ const Services = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            {services.map((service, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
@@ -124,16 +80,13 @@ const Services = () => {
                 <CardContent>
                   <h4 className="font-semibold text-primary mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
+                    {service.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-secondary rounded-full flex-shrink-0"></div>
                         <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -149,20 +102,29 @@ const Services = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Consultation", description: "Understanding your needs and vision" },
-              { step: "02", title: "Design", description: "Creating detailed plans and 3D visualizations" },
-              { step: "03", title: "Review", description: "Refining designs based on your feedback" },
-              { step: "04", title: "Delivery", description: "Final plans and project execution support" }
-            ].map((process, index) => (
-              <div key={index} className="text-center">
+            {[{
+            step: "01",
+            title: "Consultation",
+            description: "Understanding your needs and vision"
+          }, {
+            step: "02",
+            title: "Design",
+            description: "Creating detailed plans and 3D visualizations"
+          }, {
+            step: "03",
+            title: "Review",
+            description: "Refining designs based on your feedback"
+          }, {
+            step: "04",
+            title: "Delivery",
+            description: "Final plans and project execution support"
+          }].map((process, index) => <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {process.step}
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-2">{process.title}</h3>
                 <p className="text-gray-600">{process.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -177,23 +139,15 @@ const Services = () => {
             Let's discuss your project requirements and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
-              className="bg-white text-secondary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
+            <a href="/contact" className="bg-white text-secondary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
               Get Free Consultation
             </a>
-            <a 
-              href="/projects" 
-              className="border border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary transition-colors"
-            >
+            <a href="/projects" className="border border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary transition-colors">
               View Our Work
             </a>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
