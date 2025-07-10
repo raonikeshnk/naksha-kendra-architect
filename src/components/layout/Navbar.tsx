@@ -21,13 +21,13 @@ export const Navbar = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/lovable-uploads/766134ae-e9c1-463a-a5f7-4405363f8134.png"
+              src="/lovable-uploads/logo-transparent-png.png"
               alt="Naksha Kendra Logo"
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 

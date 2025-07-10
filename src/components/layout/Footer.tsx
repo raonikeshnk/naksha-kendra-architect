@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/lovable-uploads/766134ae-e9c1-463a-a5f7-4405363f8134.png"
+                src="/lovable-uploads/logo-transparent-png.png"
                 alt="Naksha Kendra Logo"
                 className="h-12 w-auto filter brightness-0 invert"
               />
