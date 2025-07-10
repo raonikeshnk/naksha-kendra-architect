@@ -19,11 +19,11 @@ export const Footer = () => {
               />
             </div>
             <p className="text-gray-300 mb-4">
-              स्थान को आकार देना, सपनों को गढ़ना।<br />
-              Expert architectural services for your dream home and commercial spaces.
+              आपके सपनों का घर, हमारी कलाकारी।<br />
+              <span className="font-devanagari">नक्शा केंद्र - <span className="text-sm">वास्तुकार</span></span>
             </p>
             <p className="text-sm text-gray-400">
-              Professional 2D Planning as per vastu, Exterier, Interior Design, and Modular Kitchen services in Neemrana, Rajasthan.
+              Experts in 2D plan as per vastu / 3D Elevations & Interior Designs. Professional architectural services in Neemrana, Rajasthan.
             </p>
           </div>
 
@@ -90,9 +90,21 @@ export const Footer = () => {
             <p className="text-gray-400 text-sm">
               © {currentYear} Naksha Kendra. All rights reserved.
             </p>
-            <p className="text-gray-400 text-sm mt-2 md:mt-0">
-              Built with passion for architectural excellence
-            </p>
+            <div className="text-gray-400 text-sm mt-2 md:mt-0 flex flex-col md:flex-row items-center gap-2">
+              <span>Built with passion for architectural excellence</span>
+              <span className="hidden md:inline">|</span>
+              <span>
+                Developed by{" "}
+                <a 
+                  href="https://www.raonikeshnk.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-secondary hover:text-white transition-colors"
+                >
+                  Rao Nikesh NK
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </div>

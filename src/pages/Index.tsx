@@ -54,7 +54,7 @@ const Index = () => {
                 <span className="text-yellow-400">हमारी कलाकारी</span>
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-gray-200">
-                <span className="font-devanagari">नक्शा केंद्र - <span className="text-xl">वास्तुकार</span></span>
+                <span className="font-devanagari">नक्शा केंद्र - <span className="text-lg">वास्तुकार</span></span>
               </p>
               <p className="text-lg mb-8 text-gray-300 max-w-xl">
                 Experts in 2D plan as per vastu / 3D Elevations & Interior Designs. 
@@ -129,7 +129,7 @@ const Index = () => {
                 Why Choose Naksha Kendra?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                With 7 years of experience in architectural design and interior solutions, 
+                With 7+ years of experience in architectural design and interior solutions, 
                 we bring your vision to life with precision, creativity, and attention to detail.
               </p>
               <div className="space-y-4 mb-8">
