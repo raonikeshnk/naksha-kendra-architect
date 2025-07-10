@@ -8,7 +8,7 @@ export const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png" alt="Naksha Kendra Logo" className="h-12 w-auto" />
+              <img src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png" alt="Naksha Kendra Logo" className="h-28 w-auto object-contain" />
             </div>
             <p className="text-gray-300 mb-4">
               आपके सपनों का घर, हमारी कलाकारी।<br />
