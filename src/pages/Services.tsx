@@ -1,78 +1,89 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, Building, ChefHat, Layers, Palette, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Home, Building, ChefHat, Layers, Palette, Ruler, Video, Sun, Moon } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: Home,
       title: "2D Planning as per vastu",
-      description: "Comprehensive floor plan design and space planning solutions as per vastu",
+      category: "Planning",
       features: [
-        "Detailed floor plan layouts as per vastu",
-        "Space optimization planning",
-        "Furniture placement suggestions",
-        "Electrical and plumbing layouts",
-        "Compliance with building codes"
+        "Floor plan design",
+        "Site layout planning",
+        "Room arrangement as per vastu",
+        "Space optimization",
+        "Building code compliance"
       ],
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "Detailed architectural plans following vastu principles for optimal space utilization and positive energy flow."
     },
     {
       icon: Building,
       title: "Exterier",
-      description: "Stunning 3D visualizations of your building's exterior design",
+      category: "3D Design",
       features: [
         "3D Elevation",
-        "Photorealistic 3D renderings",
         "Day and night view",
-        "Multiple angle views",
-        "Material and texture visualization",
-        "Lighting and shadow studies",
-        "Walkthrough exterior videos",
-        "ACP Sheet Design"
+        "Walkthrough exterier videos",
+        "ACP Sheet Design",
+        "Material selection guidance"
       ],
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "Stunning exterior visualizations with day/night views and walkthrough animations for complete design understanding."
     },
     {
       icon: ChefHat,
       title: "Modular Kitchen",
-      description: "Custom kitchen designs that blend functionality with aesthetics",
+      category: "Interior",
       features: [
-        "Custom cabinet design",
-        "Ergonomic layout planning",
-        "Appliance integration",
+        "Custom kitchen layouts",
         "Storage optimization",
-        "Premium material selection"
+        "Appliance integration",
+        "Material selection",
+        "3D visualization"
       ],
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "Functional and stylish modular kitchen designs tailored to your cooking needs and space requirements."
     },
     {
       icon: Layers,
       title: "Ceiling Design",
-      description: "Creative ceiling solutions including false ceiling, PVC wall panels, Louvers and decorative designs",
+      category: "Interior",
       features: [
-        "False ceiling installation",
+        "False ceiling design",
         "Decorative ceiling panels",
-        "Lighting integration",
         "Louvers and PVC wall panels",
+        "Lighting integration",
         "Easily Maintenance"
       ],
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "Creative ceiling solutions that enhance aesthetics while providing functional benefits and easy maintenance."
     },
     {
       icon: Palette,
       title: "Interior Designing",
-      description: "Complete interior design services to transform your space",
+      category: "Interior",
       features: [
-        "Complete space planning",
-        "Color scheme consultation",
-        "Furniture and decor selection",
+        "Space planning",
+        "Color schemes",
+        "Furniture selection",
         "Lighting design",
-        "Project management"
+        "Complete makeovers"
       ],
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "Comprehensive interior design services to create beautiful, functional spaces that reflect your personality."
     }
   ];
+
+  const getCategoryColor = (category: string) => {
+    switch(category) {
+      case "Planning":
+        return "bg-blue-500";
+      case "3D Design":
+        return "bg-primary";
+      case "Interior":
+        return "bg-secondary";
+      default:
+        return "bg-gray-500";
+    }
+  };
 
   return (
     <div className="min-h-screen bg-accent">
@@ -81,53 +92,47 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Professional architectural and interior design services tailored to your needs
+            Professional architectural and interior design services for residential and commercial projects
           </p>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <Card className="h-full shadow-lg border-0">
-                    <CardHeader>
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="p-3 bg-secondary/10 rounded-full">
-                          <service.icon className="h-8 w-8 text-secondary" />
-                        </div>
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="p-3 bg-secondary/10 rounded-full">
+                        <service.icon className="h-8 w-8 text-secondary" />
+                      </div>
+                      <div>
                         <CardTitle className="text-2xl text-primary">{service.title}</CardTitle>
                       </div>
-                      <CardDescription className="text-lg text-gray-600">
-                        {service.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <div className="relative">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-80 object-cover rounded-xl shadow-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+                    </div>
+                    <Badge className={`${getCategoryColor(service.category)} text-white`}>
+                      {service.category}
+                    </Badge>
                   </div>
-                </div>
-              </div>
+                  <CardDescription className="text-gray-600 mt-4">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold text-primary mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-secondary rounded-full flex-shrink-0"></div>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -139,23 +144,23 @@ const Services = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Simple and transparent workflow to bring your vision to life
+              From concept to completion, we follow a structured approach to deliver exceptional results
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Consultation", description: "Initial meeting to understand your requirements and vision" },
-              { step: "02", title: "Design", description: "Create detailed plans and 3D visualizations" },
-              { step: "03", title: "Approval", description: "Review and refine designs based on your feedback" },
-              { step: "04", title: "Execution", description: "Project implementation with regular updates" }
-            ].map((phase, index) => (
+              { step: "01", title: "Consultation", description: "Understanding your needs and vision" },
+              { step: "02", title: "Design", description: "Creating detailed plans and 3D visualizations" },
+              { step: "03", title: "Review", description: "Refining designs based on your feedback" },
+              { step: "04", title: "Delivery", description: "Final plans and project execution support" }
+            ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary text-white rounded-full text-xl font-bold mb-4">
-                  {phase.step}
+                <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  {process.step}
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-2">{phase.title}</h3>
-                <p className="text-gray-600">{phase.description}</p>
+                <h3 className="text-xl font-semibold text-primary mb-2">{process.title}</h3>
+                <p className="text-gray-600">{process.description}</p>
               </div>
             ))}
           </div>
@@ -169,14 +174,22 @@ const Services = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Contact us today to discuss your project requirements and get a personalized quote.
+            Let's discuss your project requirements and create something amazing together.
           </p>
-          <a 
-            href="/contact" 
-            className="bg-white text-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block"
-          >
-            Get Free Consultation
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              className="bg-white text-secondary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            >
+              Get Free Consultation
+            </a>
+            <a 
+              href="/projects" 
+              className="border border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary transition-colors"
+            >
+              View Our Work
+            </a>
+          </div>
         </div>
       </section>
     </div>

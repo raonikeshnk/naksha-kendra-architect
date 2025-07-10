@@ -8,54 +8,85 @@ const Projects = () => {
       id: 1,
       title: "Modern Villa Design",
       category: "Exterior",
-      image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/317fe995-036f-425a-915e-32c289a9c9ad.png",
       description: "Contemporary villa with clean lines and modern elevation",
       location: "Neemrana, Rajasthan"
     },
     {
       id: 2,
-      title: "Luxury Kitchen Interior",
-      category: "Interior",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Modular kitchen with island design and premium finishes",
+      title: "Residential Floor Plan - First Floor",
+      category: "Planning",
+      image: "/lovable-uploads/2d686869-ebc3-4917-a526-5ebaa50c3944.png",
+      description: "Detailed first floor plan as per vastu with room layouts",
       location: "Shahjahanpur"
     },
     {
       id: 3,
-      title: "Commercial Complex",
-      category: "Exterior",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Multi-story commercial building with glass facade",
+      title: "Ground Floor Plan",
+      category: "Planning",
+      image: "/lovable-uploads/4cba3794-e167-44b1-9859-0b31d7b8e6dc.png",
+      description: "Ground floor layout with living, kitchen, and bedroom areas",
       location: "Neemrana"
     },
     {
       id: 4,
-      title: "Living Room Design",
-      category: "Interior",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Elegant living space with custom ceiling design",
+      title: "Luxury Modern Home",
+      category: "Exterior",
+      image: "/lovable-uploads/00166b04-ef26-48e8-8667-d8fb4f93c31f.png",
+      description: "Three-story modern home with contemporary design elements",
       location: "Rajasthan"
     },
     {
       id: 5,
-      title: "Residential Duplex",
-      category: "Exterior",
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Two-story residential design with traditional elements",
-      location: "Neemrana"
+      title: "Mr. Aman Jaat - First Floor Plan",
+      category: "Planning",
+      image: "/lovable-uploads/348dac1b-00bd-4f05-9dc5-13dc0f80f973.png",
+      description: "Custom first floor plan for residential project",
+      location: "Fauladpur"
     },
     {
       id: 6,
-      title: "Master Bedroom Suite",
-      category: "Interior",
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Luxury bedroom with walk-in closet and en-suite",
-      location: "Shahjahanpur"
+      title: "Residential Layout - Column Plan",
+      category: "Planning",
+      image: "/lovable-uploads/2f848f11-1248-4012-818f-cdb09bd60aca.png",
+      description: "Structural column layout for residential construction",
+      location: "Fauladpur"
+    },
+    {
+      id: 7,
+      title: "Ground Floor - Technical Drawing",
+      category: "Planning",
+      image: "/lovable-uploads/c1d076ab-852f-405d-a378-dc391104a3a4.png",
+      description: "Detailed technical drawing with measurements and specifications",
+      location: "Neemrana"
+    },
+    {
+      id: 8,
+      title: "First Floor - Technical Plan",
+      category: "Planning",
+      image: "/lovable-uploads/1aacf659-d201-4c29-9a3d-f76392d13ba5.png",
+      description: "First floor technical plan with room dimensions",
+      location: "Neemrana"
+    },
+    {
+      id: 9,
+      title: "Night View Villa",
+      category: "Exterior",
+      image: "/lovable-uploads/b1ae0a05-5729-4a57-9e27-af3136592d0d.png",
+      description: "Beautiful night view rendering of modern villa design",
+      location: "Rajasthan"
     }
   ];
 
   const getCategoryColor = (category: string) => {
-    return category === "Exterior" ? "bg-primary" : "bg-secondary";
+    switch(category) {
+      case "Exterior":
+        return "bg-primary";
+      case "Planning":
+        return "bg-secondary";
+      default:
+        return "bg-gray-500";
+    }
   };
 
   return (

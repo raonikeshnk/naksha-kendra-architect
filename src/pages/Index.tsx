@@ -50,14 +50,14 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                स्थान को आकार देना,{" "}
-                <span className="text-yellow-400">सपनों को गढ़ना</span>
+                आपके सपनों का घर,{" "}
+                <span className="text-yellow-400">हमारी कलाकारी</span>
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-gray-200">
-                <span className="font-devanagari">नक्शा केंद्र - <span className="text-3xl">वास्तुकार</span></span>
+                <span className="font-devanagari">नक्शा केंद्र - <span className="text-xl">वास्तुकार</span></span>
               </p>
               <p className="text-lg mb-8 text-gray-300 max-w-xl">
-                Experts in Exterior 2D/3D Elevations & Interior Designs. 
+                Experts in 2D plan as per vastu / 3D Elevations & Interior Designs. 
                 Transform your vision into reality with our professional architectural services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
