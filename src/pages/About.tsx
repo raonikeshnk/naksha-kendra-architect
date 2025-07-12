@@ -42,8 +42,6 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Naksha Kendra</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            
-            <br />
             Your trusted partner in architectural excellence
           </p>
         </div>

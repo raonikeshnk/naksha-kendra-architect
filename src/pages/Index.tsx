@@ -49,7 +49,7 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ lineHeight: "1.5" }}>
                 वास्तु के साथ,{" "}
                 <span className="text-yellow-400">सपनों का निर्माण</span>
               </h1>
@@ -75,7 +75,8 @@ const Index = () => {
               <img
                 src="/lovable-uploads/766134ae-e9c1-463a-a5f7-4405363f8134.png"
                 alt="Naksha Kendra Logo"
-                className="h-64 w-auto animate-fade-in rounded-lg"
+                className="h-64 w-auto animate-fade-in rounded-tl-xl rounded-bl-3xl rounded-tr-3xl rounded-br-xl"
+                // style={{borderRadius:"40px"}}
               />
             </div>
           </div>

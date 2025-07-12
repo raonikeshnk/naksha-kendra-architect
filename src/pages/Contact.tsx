@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -30,7 +31,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       toast({
         title: "Validation Error",
@@ -51,27 +51,37 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const result = await emailjs.send(
+        "service_2lzyil9",     // Replace with your actual Service ID
+        "template_f8xlwre",    // Replace with your actual Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        },
+        "jtu480Q-2R306OHou"      // Replace with your actual Public Key
+      );
+
       toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+        title: "Message Sent!",
+        description: "We’ll get back to you shortly.",
       });
 
-      // Reset form
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
+      console.error(error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to send message. Please try again later.",
         variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   const contactInfo = [
     {
@@ -195,7 +205,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-6">Get in Touch</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  We're here to help bring your architectural dreams to life. 
+                  We're here to help bring your architectural dreams to life.
                   Contact us through any of the following channels:
                 </p>
               </div>
@@ -221,7 +231,7 @@ const Contact = () => {
                 <h3 className="font-semibold text-primary mb-4">Find Us</h3>
                 <div className="bg-gray-200 h-64 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.2376849081457!2d76.3873!3d28.2841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3c4f8e0c8c1b%3A0x8b6c8c8c8c8c8c8c!2sShahjahanpur%2C%20Neemrana%2C%20Rajasthan%20301706!5e0!3m2!1sen!2sin!4v1635787654321!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d216.17035106872518!2d76.45191717892884!3d27.995548881668707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912ab4f362a0c43%3A0x7e65738aac0aebc!2sThe%20ladder%20lads%20buildtech!5e1!3m2!1sen!2sin!4v1752331664773!5m2!1sen!2sin"
                     width="100%"
                     height="256"
                     style={{ border: 0 }}
@@ -230,6 +240,7 @@ const Contact = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Naksha Kendra Location"
                   ></iframe>
+                  {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d216.17035106872518!2d76.45191717892884!3d27.995548881668707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912ab4f362a0c43%3A0x7e65738aac0aebc!2sThe%20ladder%20lads%20buildtech!5e1!3m2!1sen!2sin!4v1752331664773!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
                 </div>
               </Card>
             </div>
