@@ -50,8 +50,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                आपके सपनों का घर,{" "}
-                <span className="text-yellow-400">हमारी कलाकारी</span>
+                वास्तु के साथ,{" "}
+                <span className="text-yellow-400">सपनों का निर्माण</span>
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-gray-200">
                 <span className="font-devanagari">नक्शा केंद्र - <span className="text-lg">वास्तुकार</span></span>
@@ -73,9 +73,9 @@ const Index = () => {
             </div>
             <div className="flex justify-center lg:justify-end">
               <img
-                src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png"
+                src="/lovable-uploads/766134ae-e9c1-463a-a5f7-4405363f8134.png"
                 alt="Naksha Kendra Logo"
-                className="h-64 w-auto animate-fade-in"
+                className="h-64 w-auto animate-fade-in rounded-lg"
               />
             </div>
           </div>

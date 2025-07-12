@@ -27,7 +27,7 @@ export const Navbar = () => {
             <img
               src="/lovable-uploads/c6cc0829-bde2-4ad2-bb03-479901437c8c.png"
               alt="Naksha Kendra Logo"
-              className="h-16 w-auto"
+              className="h-16 w-auto rounded-lg"
             />
           </Link>
 

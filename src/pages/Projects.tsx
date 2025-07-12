@@ -1,11 +1,17 @@
 
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { ImageModal } from "@/components/ui/image-modal";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
 const Projects = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState<string[]>([]);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [selectedProjectTitle, setSelectedProjectTitle] = useState("");
   const projects = [
     {
       id: 1,
@@ -169,6 +175,17 @@ const Projects = () => {
     }
   };
 
+  const openModal = (images: string[], index: number, title: string) => {
+    setSelectedImages(images);
+    setSelectedImageIndex(index);
+    setSelectedProjectTitle(title);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-accent">
       {/* Header */}
@@ -207,7 +224,8 @@ const Projects = () => {
                             <img 
                               src={image} 
                               alt={`${project.title} - Image ${index + 1}`} 
-                              className="w-full h-64 object-cover" 
+                              className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                              onClick={() => openModal(project.images, index, project.title)}
                             />
                           </CarouselItem>
                         ))}
@@ -217,7 +235,8 @@ const Projects = () => {
                     <img 
                       src={project.images[0]} 
                       alt={project.title} 
-                      className="w-full h-64 object-cover" 
+                      className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                      onClick={() => openModal(project.images, 0, project.title)}
                     />
                   )}
                   <div className="absolute top-4 left-4">
@@ -256,6 +275,15 @@ const Projects = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        images={selectedImages}
+        currentIndex={selectedImageIndex}
+        projectTitle={selectedProjectTitle}
+      />
     </div>
   );
 };
